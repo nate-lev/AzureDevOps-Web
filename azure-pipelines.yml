@@ -22,6 +22,11 @@ steps:
     parameterTypeOfSearch: 'filesSearchPattern'
     parameterFilesPattern: '*.html'
 
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)'
+    Contents: '**'
+    TargetFolder: '$(build.artifactstagingdirectory)'
 
 - task: PublishBuildArtifacts@1
   displayName: 'Publish Artifact'
