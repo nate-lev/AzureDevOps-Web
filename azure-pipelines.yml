@@ -6,6 +6,9 @@
 trigger:
 - main
 
+pool:
+  vmImage: windows-latest
+
 variables:
 - name: MyVar
   value: AzureDevOps-Web 
